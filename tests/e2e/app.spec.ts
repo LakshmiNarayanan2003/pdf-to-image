@@ -356,6 +356,18 @@ test('keyboard, themes, mobile layout and accessibility', async ({
     path: testInfo.outputPath('mobile.png'),
     fullPage: true,
   });
+  await page.getByRole('button', { name: 'Switch to dark mode' }).click();
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  await page.screenshot({
+    path: testInfo.outputPath('mobile-dark.png'),
+    fullPage: true,
+  });
+  await page.setViewportSize({ width: 1280, height: 900 });
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  await page.screenshot({
+    path: testInfo.outputPath('workspace-dark.png'),
+    fullPage: true,
+  });
 });
 test('sample appearance is stable at fixed viewport', async ({
   page,

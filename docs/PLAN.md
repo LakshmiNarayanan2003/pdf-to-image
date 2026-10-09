@@ -10,7 +10,10 @@
 - [x] Document shipped behavior, limitations, security and development.
 - [x] Add CI / Pages and run clean local release gates (43 unit/component tests; 19 browser tests; alternate-base smoke test).
 - [x] Commit and push main; observe successful GitHub CI and deployment quality gates.
-- [ ] Publish Pages: owner must enable public Pages/Actions; integration settings writes return 403.
+- [x] Publish Pages: owner enabled public Pages/Actions; deployment run 37899052570 succeeded.
+- [x] Follow the owner’s `master` branch; refresh stale source links and deployment instructions.
+- [x] Refine dark mode with neutral charcoal surfaces and remove the decorative dropzone gradient.
+- [x] Verify the refreshed theme across browsers (4 passed; 2 deliberate visual-baseline skips); prepare the update for publication from `master`.
 
 ## Decisions
 
@@ -18,4 +21,4 @@ The canonical deployment base is `/pdf-to-image/`, matching the requested reposi
 
 SVG will embed a PNG with an explicit fidelity label. No maintained SVG renderer is exported by modern PDF.js. A second PDF interpreter is unjustified for this first release. TXT / JSON extract existing text, never OCR. AVIF appears only after successful native encoding detection. TIFF is deferred.
 
-Keep version 0.1.0 until cross-browser and deployment evidence supports promotion. Initial network restrictions were resolved. GitHub reads work, but repository-setting updates and Pages creation are denied by the connected integration. No credentials will be requested or extracted.
+Keep version 0.1.0 until cross-browser and deployment evidence supports promotion. Initial network restrictions were resolved. The owner completed repository/Pages configuration; subsequent changes deploy from `master`.

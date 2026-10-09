@@ -2,6 +2,13 @@
 
 All notable changes are documented here using [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) conventions. Versions follow semantic versioning.
 
+## [Unreleased]
+
+### Changed
+
+- Dark mode now uses neutral charcoal surfaces, off-white controls and a matching document illustration; removed the decorative dropzone gradient.
+- Source links and deployment documentation follow the repository’s default `master` branch.
+
 ## [0.1.0] - 2026-10-09
 
 ### Added

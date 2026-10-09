@@ -78,7 +78,7 @@ export function Info() {
             releases your session.
           </p>
           <a
-            href={`${SOURCE}/blob/main/PRIVACY.md`}
+            href={`${SOURCE}/blob/master/PRIVACY.md`}
             target="_blank"
             rel="noreferrer"
           >
@@ -139,8 +139,8 @@ export function Info() {
         <span>Made for your files. Designed for your privacy.</span>
         <nav aria-label="Footer">
           <a href={SOURCE}>GitHub</a>
-          <a href={`${SOURCE}/blob/main/LICENSE`}>MIT License</a>
-          <a href={`${SOURCE}/blob/main/PRIVACY.md`}>Privacy</a>
+          <a href={`${SOURCE}/blob/master/LICENSE`}>MIT License</a>
+          <a href={`${SOURCE}/blob/master/PRIVACY.md`}>Privacy</a>
           <a href={`${SOURCE}#readme`}>Docs</a>
         </nav>
         <small>v0.1.0 · Free & open source</small>

@@ -2,15 +2,15 @@
 
 Repository: `LakshmiNarayanan2003/pdf-to-image`. Canonical project URL: `https://lakshminarayanan2003.github.io/pdf-to-image/`.
 
-1. Push the verified history to `main` without force pushing.
+1. Push the verified history to `master` without force pushing.
 2. In repository Settings → Pages, choose **GitHub Actions** as the build source.
-3. A push to `main`, or a manual dispatch on `main`, runs `deploy.yml`. Its reusable CI workflow installs from the lockfile, performs all quality/security/browser checks, and uploads a verified site artifact.
+3. A push to `master`, or a manual dispatch on `master`, runs `deploy.yml`. Its reusable CI workflow installs from the lockfile, performs all quality/security/browser checks, and uploads a verified site artifact.
 4. Only after checks succeed does the deployment job download that exact artifact, configure Pages, upload the Pages artifact and deploy it with GitHub's built-in OIDC/token permissions.
 5. Observe the workflow result and open the actual deployed subpath. Click Try sample PDF and verify a multi-page export before claiming publication works.
 
 PR workflows have read-only contents permissions and cannot run the deployment job. The deployment job has only `contents: read`, `pages: write` and `id-token: write`, uses the `github-pages` environment and serialized concurrency. No personal access token or repository secret is needed for ordinary Pages deployment. Existing environment protections still apply.
 
-The workflow follows current official GitHub Pages documentation. The connected GitHub integration can read repository metadata but rejects repository-setting updates and Pages creation with HTTP 403; an owner may need to make the repository public, set the default branch to main and enable Pages in Settings. Consult [verification](VERIFICATION.md) for the precise observed state. Local build success is not evidence of a remote green workflow or public deployment.
+The repository is public, uses `master` as its default and deployment branch, and has Pages configured to use GitHub Actions. Consult [verification](VERIFICATION.md) for the precise observed state. Local build success is not evidence of a remote green workflow or public deployment.
 
 ## Base path
 

@@ -6,9 +6,11 @@ A free, MIT-licensed PDF-to-image workspace. Convert multiple PDFs locally with 
 
 [Project site](https://lakshminarayanan2003.github.io/pdf-to-image/) · [Source](https://github.com/LakshmiNarayanan2003/pdf-to-image) · [Report an issue](https://github.com/LakshmiNarayanan2003/pdf-to-image/issues)
 
-> Version **0.1.0**. The project-site address is the intended deployment target, not a statement that publication succeeded. See [verification status](docs/VERIFICATION.md) for observed results (43 unit/component tests and 55 cross-browser tests passing) and deployment limitations.
+> Version **0.1.0**. Published on GitHub Pages from `master`. See [verification status](docs/VERIFICATION.md) for observed results (43 unit/component tests and 55 cross-browser tests passing) and the scope of testing.
 
 ![The real PDF2Pix interface](docs/images/desktop.png)
+
+[Dark theme](docs/images/desktop-dark.png) · [Mobile dark workspace](docs/images/mobile-dark.png)
 
 ## What you can do
 
@@ -103,7 +105,7 @@ PDF.js and JSZip load on demand. Preview/thumbnail resolution is bounded, only e
 
 ## GitHub Pages
 
-The canonical URL is `https://lakshminarayanan2003.github.io/pdf-to-image/`. Select **GitHub Actions** under repository **Settings → Pages → Build and deployment**, then push to `main` or dispatch the deployment workflow on `main`.
+The canonical URL is `https://lakshminarayanan2003.github.io/pdf-to-image/`. Select **GitHub Actions** under repository **Settings → Pages → Build and deployment**, then push to `master` or dispatch the deployment workflow on `master`.
 
 CI performs clean installation, types, lint, format, tests, production build, static/privacy checks, audit and browser tests. The deployment workflow reuses those checks and deploys only their verified artifact. Pull requests do not deploy. Permissions are scoped to the deployment job.
 

@@ -22,19 +22,29 @@
   --soft: #edf4ed;
   --stage: #e9ede7;
   --shadow: 0 12px 40px #203c2810;
+  --drop-border: #b8cabc;
+  --paper: #fff;
+  --paper-back: #e1eddf;
+  --paper-line: #d9e6da;
+  --paper-badge: #d4e6c7;
   color-scheme: light;
 }
 :root[data-theme='dark'] {
-  --bg: #141d19;
-  --panel: #1c2821;
-  --ink: #e4ece5;
-  --muted: #a5b6aa;
-  --line: #35463b;
-  --accent: #b5dfbd;
-  --accent-hover: #d0ecd4;
-  --soft: #283b2e;
-  --stage: #111a14;
-  --shadow: 0 12px 40px #0003;
+  --bg: #111113;
+  --panel: #1b1b1e;
+  --ink: #ededee;
+  --muted: #aaaab2;
+  --line: #343439;
+  --accent: #e4e4e7;
+  --accent-hover: #fff;
+  --soft: #27272b;
+  --stage: #141416;
+  --shadow: 0 8px 28px #0002;
+  --drop-border: #48484f;
+  --paper: #303035;
+  --paper-back: #222225;
+  --paper-line: #55555e;
+  --paper-badge: #3d3d44;
   color: var(--ink);
   background: var(--bg);
   color-scheme: dark;
@@ -312,8 +322,8 @@ main {
   flex-direction: column;
 }
 .dropzone {
-  border: 1.5px dashed #b8cabc;
-  background: linear-gradient(140deg, var(--panel), var(--soft));
+  border: 1px dashed var(--drop-border);
+  background: var(--bg);
   border-radius: 12px;
   min-height: 430px;
   display: flex;
@@ -338,22 +348,22 @@ main {
   width: 73px;
   height: 91px;
   border-radius: 6px;
-  box-shadow: 0 6px 13px #183c2814;
-  border: 1px solid #d0ddd0;
+  box-shadow: 0 4px 10px #0002;
+  border: 1px solid var(--drop-border);
   left: 38px;
   top: 15px;
-  background: #fff;
+  background: var(--paper);
 }
 .paper.back {
   transform: rotate(-14deg);
   left: 22px;
   top: 21px;
-  background: #e1eddf;
+  background: var(--paper-back);
 }
 .paper.front {
   transform: rotate(10deg);
   padding: 12px;
-  color: #285f49;
+  color: var(--accent);
 }
 .paper.front > span {
   font-size: 9px;
@@ -366,7 +376,7 @@ main {
   width: 90%;
   height: 3px;
   margin: 5px 0;
-  background: #d9e6da;
+  background: var(--paper-line);
   border-radius: 4px;
 }
 .paper i:nth-of-type(2) {
@@ -377,8 +387,8 @@ main {
   bottom: 9px;
   right: -14px;
   border-radius: 7px;
-  background: #d4e6c7;
-  border: 4px solid #f6faf3;
+  background: var(--paper-badge);
+  border: 4px solid var(--bg);
   width: 44px;
   height: 39px;
   display: grid;
@@ -388,7 +398,7 @@ main {
   position: absolute;
   right: 8px;
   top: 0;
-  color: #6d8c56;
+  color: var(--muted);
   font-size: 27px;
 }
 .dropzone h2 {
@@ -1054,7 +1064,7 @@ footer small {
   box-shadow: var(--shadow);
 }
 .password-dialog::backdrop {
-  background: #102018aa;
+  background: #0009;
   backdrop-filter: blur(4px);
 }
 .password-dialog h2 {
