@@ -10,6 +10,14 @@ import {
 } from './utils';
 import { canvasBlob, rasterSvg, releaseCanvas, renderPage } from './render';
 export function planExport(docs: LoadedDocument[], options: ExportOptions) {
+  if (
+    options.mode === 'all' &&
+    docs.reduce((sum, doc) => sum + doc.pdf.numPages, 0) > MAX_PAGES
+  ) {
+    throw new UserError(
+      'Export up to 500 pages at a time. Choose a smaller range.',
+    );
+  }
   const used = new Set<string>();
   return docs.map((doc) => {
     let stem = safeStem(doc.name);

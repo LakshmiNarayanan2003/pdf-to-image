@@ -11,7 +11,7 @@ npx playwright install --with-deps chromium firefox webkit
 npm run test:e2e
 ```
 
-Vitest covers range grammar, ordering/deduplication, out-of-bounds pages, filename sanitization, padding, DPI math/limits and safe error reporting, encoder failure, MIME fallback rejection, canvas release and sanitized SVG structure. Testing Library exercises format selection, honest SVG labels, codec availability, conditional quality controls and progress/cancellation semantics.
+Vitest covers range grammar, ordering/deduplication, out-of-bounds pages, filename sanitization, padding, DPI math/limits, preallocation limits for extreme page counts/ranges, and safe error reporting, encoder failure, MIME fallback rejection, canvas release and sanitized SVG structure. Testing Library exercises format selection, honest SVG labels, codec availability, conditional quality controls and progress/cancellation semantics.
 
 Playwright runs against the production Vite preview at the actual project subpath. It downloads and parses output, rather than only checking buttons:
 

@@ -13,11 +13,27 @@ export function parseRange(input: string, total: number): number[] {
       throw new Error('Use page numbers and ranges, for example 1-3,5.');
     const start = Number(match[1]);
     const end = Number(match[2] ?? match[1]);
-    if (start < 1 || end < start || end > total)
+    if (
+      !Number.isSafeInteger(start) ||
+      !Number.isSafeInteger(end) ||
+      start < 1 ||
+      end < start ||
+      end > total
+    )
       throw new Error(
         `Pages must be between 1 and ${total}, in ascending ranges.`,
       );
-    for (let page = start; page <= end; page++) pages.add(page);
+    if (end - start + 1 > MAX_PAGES)
+      throw new Error(
+        'Export up to 500 pages at a time. Choose a smaller range.',
+      );
+    for (let page = start; page <= end; page++) {
+      pages.add(page);
+      if (pages.size > MAX_PAGES)
+        throw new Error(
+          'Export up to 500 pages at a time. Choose a smaller range.',
+        );
+    }
   }
   return [...pages].sort((a, b) => a - b);
 }

@@ -64,3 +64,10 @@ it('reports safe application errors', () =>
   expect(friendlyError(new UserError('Choose fewer pages.'))).toBe(
     'Choose fewer pages.',
   ));
+
+it('rejects extreme ranges before expanding them', () => {
+  expect(() => parseRange('1-1000000000', 1000000000)).toThrow('500 pages');
+  expect(() => parseRange('9007199254740992', Infinity)).toThrow();
+  expect(() => parseRange('1-300,301-501', 501)).toThrow('500 pages');
+  expect(parseRange('1-500,1-500', 500)).toHaveLength(500);
+});

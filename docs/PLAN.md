@@ -8,8 +8,9 @@
 - [x] Verify actual output, privacy, keyboard and accessibility in installed Chromium (19 passing browser tests).
 - [x] Verify Firefox/WebKit and pinned Chromium: 55 passing browser tests, 2 deliberate Chromium-only baseline skips, zero failures.
 - [x] Document shipped behavior, limitations, security and development.
-- [x] Add CI / Pages and run clean local release gates (41 unit/component tests; 19 browser tests; alternate-base smoke test).
-- [ ] Commit, push and attempt authorized publication.
+- [x] Add CI / Pages and run clean local release gates (43 unit/component tests; 19 browser tests; alternate-base smoke test).
+- [x] Commit and push main; observe successful GitHub CI and deployment quality gates.
+- [ ] Publish Pages: owner must enable public Pages/Actions; integration settings writes return 403.
 
 ## Decisions
 

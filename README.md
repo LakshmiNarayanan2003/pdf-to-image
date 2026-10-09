@@ -6,7 +6,7 @@ A free, MIT-licensed PDF-to-image workspace. Convert multiple PDFs locally with 
 
 [Project site](https://lakshminarayanan2003.github.io/pdf-to-image/) · [Source](https://github.com/LakshmiNarayanan2003/pdf-to-image) · [Report an issue](https://github.com/LakshmiNarayanan2003/pdf-to-image/issues)
 
-> Version **0.1.0**. The project-site address is the intended deployment target, not a statement that publication succeeded. See [verification status](docs/VERIFICATION.md) for observed results (41 unit/component tests and 55 cross-browser tests passing) and deployment limitations.
+> Version **0.1.0**. The project-site address is the intended deployment target, not a statement that publication succeeded. See [verification status](docs/VERIFICATION.md) for observed results (43 unit/component tests and 55 cross-browser tests passing) and deployment limitations.
 
 ![The real PDF2Pix interface](docs/images/desktop.png)
 

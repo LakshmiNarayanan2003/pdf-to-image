@@ -24,7 +24,7 @@ Milestones describe quality goals, not promised dates. Implemented later-milesto
 
 ## v1.0 — Observed cross-browser stable release
 
-- [ ] Observe required checks in Chromium, Firefox and WebKit on supported platforms.
+- [x] Observe automated checks in Chromium, Firefox and WebKit locally and in GitHub CI.
 - [ ] Verify the actual public Pages deployment and download workflow.
 - [ ] Resolve significant compatibility findings and expand adversarial/fidelity coverage.
 

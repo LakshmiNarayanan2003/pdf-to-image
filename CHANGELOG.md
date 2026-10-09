@@ -20,7 +20,7 @@ All notable changes are documented here using [Keep a Changelog](https://keepach
 ### Security
 
 - Byte-only document loading, local workers/fonts/CMaps/WASM, restrictive CSP and no app persistence, analytics or service workers.
-- Explicit file, batch, page and canvas safety limits; cleanup on navigation/removal/cancellation.
+- Explicit file, batch, page and canvas safety limits, including rejection before allocating extreme page lists; cleanup on navigation/removal/cancellation.
 - No untrusted SVG elements or raw HTML injection from extracted content.
 
 ### Fixed during verification
