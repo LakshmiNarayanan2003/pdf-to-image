@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; font-src 'self' blob: data:; connect-src 'self'; form-action 'none'; object-src 'none'; base-uri 'self'; manifest-src 'self'"
+    />
+    <meta
+      name="description"
+      content="Convert PDF pages to PNG, JPG, WebP and raster-backed SVG locally in your browser. Free, open source, no uploads, no account required."
+    />
+    <meta name="theme-color" content="#ecf3ef" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <link
+      rel="canonical"
+      href="https://lakshminarayanan2003.github.io/pdf-to-image/"
+    />
+    <meta
+      property="og:title"
+      content="PDF2Pix — Convert PDFs. Keep them private."
+    />
+    <meta
+      property="og:description"
+      content="Crisp images. Zero uploads. A free, open-source PDF converter that runs in your browser."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://lakshminarayanan2003.github.io/pdf-to-image/"
+    />
+    <meta
+      property="og:image"
+      content="https://lakshminarayanan2003.github.io/pdf-to-image/social-preview.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>
+      PDF to PNG, JPG, WebP &amp; SVG Converter - Free &amp; Private | PDF2Pix
+    </title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript
+      >PDF2Pix converts PDFs locally in your browser. JavaScript is required for
+      conversion. Documents are never uploaded. SVG output embeds a PNG and does
+      not preserve editable vectors.</noscript
+    >
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
