@@ -1,7 +1,7 @@
 name: Deploy GitHub Pages
 on:
   push:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
 permissions:
   contents: read
@@ -10,12 +10,12 @@ concurrency:
   cancel-in-progress: false
 jobs:
   quality:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     uses: ./.github/workflows/ci.yml
     permissions:
       contents: read
   deploy:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     needs: quality
     runs-on: ubuntu-24.04
     timeout-minutes: 10
