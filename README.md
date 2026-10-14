@@ -1,6 +1,6 @@
 # PDF2Pix
 
-**Convert PDFs. Keep them private.**
+**Convert PDFs. Keep them private.** 
 
 A free, MIT-licensed PDF-to-image workspace. Convert multiple PDFs locally with previews, page ranges, DPI controls and ZIP downloads. No account, conversion server, telemetry or document upload.
 
